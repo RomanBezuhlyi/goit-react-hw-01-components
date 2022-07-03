@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 
 export const Card = styled.div`
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
     border: ${props => `2px solid ${props.theme.colors.black}`};
     padding: 5px 0;
 `;

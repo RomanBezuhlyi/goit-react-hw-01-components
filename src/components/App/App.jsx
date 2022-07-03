@@ -1,4 +1,6 @@
 import { Profile } from 'components/Profile/Profile';
+import { Statistics } from 'components/Statistics/Statistics';
+import data from '../../data.json';
 import user from '../../user.json';
 import { Container } from './App.styled';
 import { Section } from './App.styled';
@@ -17,7 +19,12 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
         />
-        </Section>
+      </Section>
+      <Section>
+        <Statistics
+          title="Upload stats"
+          stats={data} />
+      </Section>
       </Container>
   );
 };
