@@ -13,32 +13,27 @@ import transactions from '../../data/transactions.json';
 import { Container } from './App.styled';
 import { Section } from './App.styled';
 
-
 export const App = () => {
   return (
     <Container>
       <Section>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
         />
       </Section>
       <Section>
-        <Statistics
-          title="Upload stats"
-          stats={data} />
+        <Statistics title="Upload stats" stats={data} />
       </Section>
       <Section>
-        <FriendList
-          friends={friends} />
+        <FriendList friends={friends} />
       </Section>
       <Section>
-        <TransactionHistory
-          items={transactions} />
+        <TransactionHistory items={transactions} />
       </Section>
-      </Container>
+    </Container>
   );
 };

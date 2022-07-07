@@ -11,8 +11,7 @@ import {
 export const Statistics = ({ title, stats }) => {
   return (
     <CardStats>
-      <CardTitle>{title}</CardTitle>
-
+      {title.length > 0 && <CardTitle>{title}</CardTitle>}
       <StatList>
         {stats.map(stat => (
           <Item key={stat.id}>
@@ -26,7 +25,7 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
